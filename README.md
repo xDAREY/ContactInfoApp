@@ -1,6 +1,6 @@
 # contact_info_app
 
-A new Flutter project.
+The coming about of this project was just for a demo but later on it is going to be for developers trying to share their information to recruiters via an app.
 
 ## Getting Started
 
