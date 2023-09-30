@@ -145,8 +145,8 @@ class InfoApp extends StatelessWidget {
 
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
-            child: Text('CONNECT'),
-          materialTapTargetSize: ,
+            child: Icon(Icons.connect_without_contact_sharp),
+          backgroundColor: Colors.deepPurple,
         ),
 
       );
