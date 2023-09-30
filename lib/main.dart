@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
@@ -38,7 +40,7 @@ class InfoApp extends StatelessWidget {
 
               Center(
                 child: Text(
-                  'NAME',
+                  'FIRST NAME',
                   style: TextStyle(
                     color: Colors.deepPurple,
                     fontWeight: FontWeight.bold,
@@ -51,13 +53,39 @@ class InfoApp extends StatelessWidget {
 
               Center(
                 child: Text(
-                  'DARE',
+                    'DARE',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 28,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 2.0,
+                    )
+                ),
+              ),
+
+              SizedBox(height: 30.0,),
+
+              Center(
+                child: Text(
+                  'LAST NAME',
+                  style: TextStyle(
+                    color: Colors.deepPurple,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+
+              SizedBox(height: 10.0,),
+
+              Center(
+                child: Text(
+                  'EMMANUEL',
                   style: TextStyle(
                     color: Colors.black,
-                    fontSize: 28,
                     fontWeight: FontWeight.bold,
+                    fontSize: 28.0,
                     letterSpacing: 2.0,
-                  )
+                  ),
                 ),
               ),
 
@@ -114,7 +142,15 @@ class InfoApp extends StatelessWidget {
             ],
           ),
         ),
+
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+            child: Text('CONNECT'),
+          materialTapTargetSize: ,
+        ),
+
       );
+
    }
 }
 
