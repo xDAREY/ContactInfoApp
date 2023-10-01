@@ -9,14 +9,25 @@ void main() => runApp(MaterialApp(
 
   ));
 
-class InfoApp extends StatelessWidget {
+class InfoApp extends StatefulWidget {
+
+  @override
+  State<InfoApp> createState() => _InfoAppState();
+}
+
+class _InfoAppState extends State<InfoApp> {
+
+  int devLevel = 0;
+  String name = 'Dare';
+  String last_name = 'Emmanuel';
+  String email = 'FlutterDevDare@studio.com';
 
   @override
   Widget build(BuildContext context) {
       return  Scaffold(
         backgroundColor: Colors.white,
           appBar: AppBar(
-                title: Text('Flutter Dev Profile'),
+                title: Text('Flutter Dev '),
             centerTitle: true,
             backgroundColor: Colors.deepPurpleAccent,
             foregroundColor: Colors.white,
@@ -53,7 +64,7 @@ class InfoApp extends StatelessWidget {
 
               Center(
                 child: Text(
-                    'DARE',
+                    '$name',
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 28,
@@ -79,7 +90,7 @@ class InfoApp extends StatelessWidget {
 
               Center(
                 child: Text(
-                  'EMMANUEL',
+                  '$last_name',
                   style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
@@ -93,7 +104,7 @@ class InfoApp extends StatelessWidget {
 
               Center(
                 child: Text(
-                    'EXPERIENCE',
+                    'STAGE',
                     style: TextStyle(
                       letterSpacing: 2.0,
                       fontWeight: FontWeight.bold,
@@ -106,7 +117,7 @@ class InfoApp extends StatelessWidget {
 
               Center(
                 child: Text(
-                    '2 WEEKS',
+                    '$devLevel',
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 28,
@@ -129,7 +140,7 @@ class InfoApp extends StatelessWidget {
                   SizedBox(width: 10.0),
 
                   Text(
-                    'flutterDevDare@studio.com',
+                    '$email',
                     style: TextStyle(
                       color: Colors.black,
                       fontWeight: FontWeight.bold,
@@ -139,20 +150,31 @@ class InfoApp extends StatelessWidget {
                   ),
                 ],
               ),
+
+              Divider(
+                color: Colors.grey,
+              ),
+
             ],
           ),
         ),
-
         floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-            child: Icon(Icons.connect_without_contact_sharp),
+          onPressed: () {
+            setState(() {
+              devLevel +=1;
+            });
+          },
+            child: Icon(Icons.add),
           backgroundColor: Colors.deepPurple,
+          splashColor: Colors.purple,
         ),
 
       );
 
    }
 }
+
+
 
 
 
